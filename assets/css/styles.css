@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: var(--color-1);
     color: #f1f1f1;
     user-select: none;
 }
@@ -13,12 +12,21 @@
     --color-4:rgb(153, 181, 245);
     --color-5:rgb(135, 143, 160);
     --color-6:rgb(81, 112, 118);
+    --color-7: rgba(0, 0, 0, 0.5);
 
     --font-family: Playfair Display;
+    --font-family-2: Raleway;
+
+    --background-sobre: url(../img/imgEquipeQuesia.png) no-repeat center;
 }
 
 html {
     scroll-behavior: smooth;
+  }
+
+  body, html {
+    height: 100%;
+    background-color: var(--color-1);
   }
 
 /* Navbar */
@@ -63,6 +71,8 @@ html {
     margin-left: 14px;
     position: fixed;
     z-index: 100;
+    background-color: transparent;
+    top: 5px;
 }
   
   /* When you mouse over the navigation links, change their color */
@@ -92,23 +102,27 @@ html {
 main {
     background-color: var(--color-1);
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 80px;
 }
 
 
 #mainNome {
     font-family: var(--font-family);
     color: var(--color-2);
-    font-size: 12vh;
+    font-size: 10vh;
     height: 100%;
-    width: 28vh;
+    width: 0vh;
     user-select: none;
+}
+
+.nome {
+  z-index: 2;
 }
 
 .imgQuesia {
@@ -117,10 +131,7 @@ main {
     aspect-ratio: 9 / 16;
     -webkit-filter: saturate(0);
     background-color: #818181;
-    border-radius: 88px;
     background: linear-gradient(145deg, #353535, #f0f0f0);
-    box-shadow:  3px 3px 12px #bebebe,
-                 -3px -3px 12px #494949;
     user-select: none;
 }
 
@@ -129,6 +140,18 @@ main {
     transition: all .1s ease-in-out;
 }
 
+.imgQuesia::after {
+  transition: all .1s ease-in-out;
+}
+
+.box {
+    opacity: 0; /* Inicialmente, ocultamos o conteúdo */
+    transition: opacity 0.5s ease-in-out; /* Adicionamos uma transição de opacidade */
+}
+
+.box.in-view {
+    opacity: 1; /* Quando a classe 'in-view' é aplicada, a caixa fica visível */
+}
 .arrow {
     position: relative;
     width: 100%;
@@ -136,6 +159,7 @@ main {
     text-align: center;
     align-content: center;
     cursor: pointer;
+    margin-top: 100px;
 }
 
 .arrow:hover {
@@ -149,32 +173,85 @@ main {
     background-color: transparent;
 }
 
-.sobreMim {
-    width: 100%;
-    height: 80vh;
-}
-
-.sobreMim p {
-    font-size: 12vh;
-    color: var(--color-2);
-    text-align: right;
-    margin-right: 8vh;
-}
-
-.box {
-    opacity: 0; /* Inicialmente, ocultamos o conteúdo */
-    transition: opacity 0.5s ease-in-out; /* Adicionamos uma transição de opacidade */
-}
-
-.box.in-view {
-    opacity: 1; /* Quando a classe 'in-view' é aplicada, a caixa fica visível */
-}
-
-.sobreText {
+.sobre {
+  margin-top: 200px;
   width: 100%;
-  height: 80vh;
+  background-image: url("../img/imgEquipeQuesia.png");
+
+  /* Full height */
+  height: 90vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.sobreText h5 {
-  width: 80%;
+.title p {
+  background-color: transparent;
+  font-family: var(--font-family);
+  font-size: 12vh;
+  color: var(--color-2);
+  text-align: right;
+  margin-top: 24px;
+  width: 90%;
+}
+
+.textSobre {
+  width: 60%;
+  margin-top: 8vh;
+}
+
+.textSobre p {
+  font-family: var(--font-family-2);
+  font-size: 48px;
+  margin-left: 16vh;
+}
+
+.teste {
+  width: 100%;
+  height: 100vh;
+}
+
+@media (max-width: 1304px){
+  .textSobre {
+    width: 80%;
+  }
+}
+
+@media (max-width: 914px){
+  .textSobre {
+    width: 70%;
+  }
+
+  .textSobre p {
+    font-family: var(--font-family-2);
+    font-size: 34px;
+    margin-left: 16vh;
+  }
+}
+
+@media (max-width: 656px){
+
+  .textSobre {
+    width: 70%;
+  }
+  
+  .title p {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    font-size: 8vh;
+  }
+
+  .textSobre p {
+    font-family: var(--font-family-2);
+    font-size: 28px;
+    margin-left: 8vh;
+  }
+}
+
+@media (max-width: 656px) {
+
 }

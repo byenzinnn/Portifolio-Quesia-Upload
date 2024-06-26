@@ -20,12 +20,14 @@ boxes.forEach(box => {
     } else {
         box.classList.remove('in-view');
     }
+
+
 });
 });
 
 function btnScroll() {
       window.scroll({
-      top: 800,
+      top: 1200,
       behavior: "smooth"
     });
   }
