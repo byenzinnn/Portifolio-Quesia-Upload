@@ -21,8 +21,31 @@ boxes.forEach(box => {
         box.classList.remove('in-view');
     }
 
-
 });
+});
+
+window.addEventListener('scroll', function() {
+  const cards = document.querySelectorAll('.timeline .card');
+
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (cardTop < windowHeight * 0.75 && !card.classList.contains('animated')) {
+      anime({
+        targets: card,
+        translateX: [-500, 0],
+        duration: 1000,
+        easing: 'easeOutQuad'
+      });
+      card.classList.add('animated');
+    }
+  });
+});
+
+anime({
+  targets: '.title',
+  translateX: [-100, 0]
 });
 
 function btnScroll() {
@@ -31,3 +54,4 @@ function btnScroll() {
       behavior: "smooth"
     });
   }
+
