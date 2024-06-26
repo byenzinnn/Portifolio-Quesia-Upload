@@ -36,7 +36,7 @@ window.addEventListener('scroll', function() {
         targets: card,
         translateX: [-500, 0],
         duration: 1000,
-        easing: 'easeOutQuad'
+        easing: 'linear'
       });
       card.classList.add('animated');
     }

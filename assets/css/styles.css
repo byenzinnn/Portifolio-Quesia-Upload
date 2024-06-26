@@ -185,7 +185,7 @@ main {
   background-image: url("../img/imgEquipeQuesia.png");
 
   /* Full height */
-  height: 90vh;
+  height: 90%;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -207,6 +207,7 @@ main {
 .textSobre {
   width: 60%;
   margin-top: 8vh;
+  margin-bottom: 8vh
 }
 
 .textSobre p {
@@ -233,24 +234,12 @@ main {
   }
 }
 
-@media (max-width: 914px){
-  .textSobre {
-    width: 90%;
-    
-  }
-}
-
 @media (max-width: 656px){
-
-  .textSobre {
-    width: 70%;
-    
-  }
   
   .title p {
     text-align: center;
     width: 100%;
-    font-size: 14vh;
+    font-size: 10vh;
     margin-top: 10vh;
   }
 
@@ -258,6 +247,7 @@ main {
     font-family: var(--font-family-2);
     font-size: 28px;
     margin-left: 8vh;
+    width: 90%;
   }
 }
 
