@@ -1,3 +1,20 @@
+function anLoad(){
+  anime({
+    targets: '.nome',
+    translateX: [-200, 0],
+    opacity: [0, 1],
+    duration: 1000,
+    easing: 'easeInOutSine'
+  });
+  anime({
+    targets: '.imageQuesia',
+    translateX: [100, 0],
+    opacity: [0, 1],
+    duration: 1000,
+    easing: 'easeInOutSine'
+  });
+}
+
 /* Open when someone clicks on the span element */
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
@@ -31,12 +48,12 @@ window.addEventListener('scroll', function() {
     const cardTop = card.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
 
-    if (cardTop < windowHeight * 0.75 && !card.classList.contains('animated')) {
+    if (cardTop < windowHeight * 0.90 && !card.classList.contains('animated')) {
       anime({
         targets: card,
-        translateX: [-500, 0],
+        translateX: [-100, 0],
         duration: 1000,
-        easing: 'linear'
+        easing: 'easeInOutSine'
       });
       card.classList.add('animated');
     }
