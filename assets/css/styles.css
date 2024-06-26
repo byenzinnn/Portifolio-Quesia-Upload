@@ -223,6 +223,29 @@ main {
   margin-left: 16vh;
 }
 
+@media (max-width: 1135px) {
+  .textSobre p {
+    margin-left: 4vh;
+  }
+  .textSobre {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1135px) {
+  .textSobre p {
+    font-size: 32px;
+  }
+  .textSobre {
+    width: 90%;
+  }
+
+  .title p {
+    font-size: 8vh;
+    width: 100%;
+    text-align: center;
+  }
+}
 .timeline {
   width: 100%;
   display: flex;
