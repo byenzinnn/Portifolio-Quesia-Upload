@@ -67,7 +67,7 @@ anime({
 
 function btnScroll() {
       window.scroll({
-      top: 1200,
+      top: 900,
       behavior: "smooth"
     });
   }

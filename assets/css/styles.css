@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+
 * {
     padding: 0;
     margin: 0;
@@ -14,8 +18,8 @@
     --color-6:rgb(81, 112, 118);
     --color-7: rgba(0, 0, 0, 0.5);
 
-    --font-family: Playfair Display;
-    --font-family-2: Raleway;
+    --font-family: "Libre Baskerville", serif;
+    --font-family-2: "League Spartan", sans-serif;
 
     --background-sobre: url(../img/imgEquipeQuesia.png) no-repeat center;
 }
@@ -102,7 +106,6 @@ html {
 main {
     background-color: var(--color-1);
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -197,9 +200,6 @@ main {
   height: 90vh;
   background-image: url("../img/imgEquipeQuesia.png");
 
-  /* Full height */
-  height: 90%;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -234,7 +234,7 @@ main {
     margin-left: 4vh;
   }
   .textSobre {
-    width: 90%;
+    width: 80%;
   }
 }
 
@@ -281,16 +281,15 @@ main {
 
 .container h4 {
   font-family: var(--font-family);
-  font-size: 24px;
-  
+  font-size: 18px;
+  margin-top: 14px;
 }
 
 .container p {
   font-family: var(--font-family-2);
   margin-top: 4px;
   font-size: 16px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-top: 14px;
 }
 
 .title-time {
