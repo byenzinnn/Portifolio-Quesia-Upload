@@ -1,11 +1,36 @@
 function anLoad(){
   anime({
-    targets: '.nome',
+    targets: '#mainNome1',
     translateX: [-200, 0],
     opacity: [0, 1],
     duration: 1000,
     easing: 'easeInOutSine'
   });
+  anime({
+    targets: '#mainNome2',
+    translateX: [-200, 0],
+    opacity: [0, 1],
+    duration: 1000,
+    delay: 100,
+    easing: 'easeInOutSine'
+  });
+  anime({
+    targets: '#mainNome3',
+    translateX: [-200, 0],
+    opacity: [0, 1],
+    duration: 1000,
+    delay: 200,
+    easing: 'easeInOutSine'
+  });
+  anime({
+    targets: '#mainNome4',
+    translateX: [-200, 0],
+    opacity: [0, 1],
+    duration: 1000,
+    delay: 300,
+    easing: 'easeInOutSine'
+  });
+
   anime({
     targets: '.imageQuesia',
     translateX: [100, 0],
@@ -52,8 +77,8 @@ window.addEventListener('scroll', function() {
       anime({
         targets: card,
         translateX: [-100, 0],
-        duration: 1000,
-        easing: 'easeInOutSine'
+        duration: 2000,
+        easing: 'linear'
       });
       card.classList.add('animated');
     }
@@ -72,3 +97,4 @@ function btnScroll() {
     });
   }
 
+  
